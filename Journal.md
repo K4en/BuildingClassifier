@@ -19,6 +19,65 @@ I didn’t write the implementation code from scratch. I used ChatGPT to help me
 It might be chaotic. It might not be formal. But it's real. And that's worth documenting.
 
 ---
+## 🧠 Phase I — Binary Classifier (Residential vs Industrial)
+
+### ✅ Goals:
+- Build a model **from scratch using PyTorch**, no pre-trained models
+- Classify between two building types: `residential` and `industrial`
+- Set up full pipeline: dataset download, training, evaluation
+
+### 🔧 Model Architecture
+- `BuildingClassifier` — 3 conv layers + 2 FC layers
+- Image input: 128x128 RGB
+- Final layer uses `Sigmoid` for binary output
+
+### 📦 Dataset
+- Downloaded using `duckduckgo_search`
+- ~500 images per category
+- Images resized to 128x128 for training
+
+### 🏋️‍♂️ Training Info
+- **Epochs:** 10
+- **Batch Size:** 32
+- **Loss Function:** `BCELoss`
+- **Optimizer:** Adam (lr=0.001)
+- **Device:** CPU
+
+### 📉 Training Loss Per Epoch
+```
+Epoch [1/10] Loss: 0.6982
+Epoch [2/10] Loss: 0.6687
+Epoch [3/10] Loss: 0.6002
+Epoch [4/10] Loss: 0.5330
+Epoch [5/10] Loss: 0.4943
+Epoch [6/10] Loss: 0.4828
+Epoch [7/10] Loss: 0.4481
+Epoch [8/10] Loss: 0.4356
+Epoch [9/10] Loss: 0.4163
+Epoch [10/10] Loss: 0.3783
+```
+
+### ✅ Evaluation Results
+- **Validation Accuracy:** `94.03%`
+
+### 🧪 Observations:
+- Model converged smoothly with no instability
+- Accuracy above 90% on small custom dataset
+- Promising baseline for expanding to multiclass and style-based classification
+
+### 🛠️ Utilities Implemented:
+- `save_model(model, path)`
+- `plot_training_loss(loss_values)`
+- `count_parameters(model)`
+
+---
+
+## 🔜 Next Phases
+- [ ] Extend to multiclass (e.g. religious, commercial, ancient, etc.)
+- [ ] Visualize predictions on single images
+- [ ] Transition to cultural and stylistic classification (e.g. Gothic, Baroque)
+
+---
 
 ## Appendix: The Original Thought That Sparked the Replay Buffer
 
