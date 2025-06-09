@@ -17,12 +17,12 @@ REPLAY_DIR = "replay_buffer"
 
 # Transform
 transform = transforms.Compose([
-    transforms.Resize(128, 128),
+    transforms.Resize((128, 128)),
     transforms.ToTensor(),
 ])
 
 # Dataset
-train_dataset = datasets.ImageFolder(root="Data/Train", transform=transform)
+train_dataset = datasets.ImageFolder(root="Data/Training", transform=transform)
 train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
 
 # Validation dataset

@@ -1,25 +1,35 @@
 import os, shutil, random
 
-def split_dataset(source_dir, train_dir, val_dir, split_ratio=0.8):
-    os.makedirs(train_dir, exist_ok=True)
-    os.makedirs(val_dir, exist_ok=True)
+def split_dataset(source_root, train_root, val_root, split_ratio=0.8):
+    for class_name in os.listdir(source_root):
+        class_path = os.path.join(source_root, class_name)
+        if not os.path.isdir(class_path):
+            continue
 
-    for class_name in os.listdir(source_dir):
-        all_images = os.listdir(os.path.join(source_dir, class_name))
+        all_images = os.listdir(class_path)
         random.shuffle(all_images)
 
         split = int(len(all_images) * split_ratio)
         train_imgs = all_images[:split]
         val_imgs = all_images[split:]
 
-        os.makedirs(os.path.join(train_dir, class_name), exist_ok=True)
-        os.makedirs(os.path.join(val_dir, class_name), exist_ok=True)
+        train_class_path = os.path.join(train_root, class_name)
+        val_class_path = os.path.join(val_root, class_name)
+
+        os.makedirs(train_class_path, exist_ok=True)
+        os.makedirs(val_class_path, exist_ok=True)
 
         for img in train_imgs:
             shutil.copy(
-                os.path.join(source_dir, class_name, img),
-                os.path.join(train_dir, class_name, img)
+                os.path.join(class_path, img),
+                os.path.join(train_class_path, img)
             )
 
-split_dataset("Data/Raw/Residential", "Data/Train/Residential", "Data/Val/Residential")
-split_dataset("Data/Raw/Industrial", "Data/Train/Industrial", "Data/Val/Industrial")
+        for img in val_imgs:
+            shutil.copy(
+                os.path.join(class_path, img),
+                os.path.join(val_class_path, img)
+            )
+
+split_dataset("Data/Raw", "Data/Training", "Data/Val")
+split_dataset("Data/Raw", "Data/Training", "Data/Val")
