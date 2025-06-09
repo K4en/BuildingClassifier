@@ -60,6 +60,9 @@ AI_Building_Classifier/
 ```
 
 ---
+📉 Training Loss Over Time
+![training_loss](https://github.com/user-attachments/assets/28a52d68-dd0b-4119-8974-e7915d6c1dc8)
+---
 
 ## 🧾 License & Attribution
 
