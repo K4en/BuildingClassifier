@@ -5,11 +5,8 @@ import torch.optim as optim
 from torch.utils.data import DataLoader, Subset, Dataset
 from torchvision import datasets, transforms
 from model import BuildingClassifier
-import shutil
 from PIL import Image
-import numpy as np
-
-from train import train_dataset, val_dataset, criterion
+from utils import plot_training_loss
 
 # Config
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
@@ -44,6 +41,8 @@ def save_replay_image(image_tensor, class_idx, filename):
     image = transforms.ToPILImage()(image_tensor.cpu())
     image.save(os.path.join(REPLAY_DIR, str(class_idx), filename))
 
+loss_values = []
+
 for epoch in range(5):
     epoc_losses = [] # store (loss, image, label, idx) tuples
 
@@ -70,7 +69,9 @@ for epoch in range(5):
     for loss_val, img_tensor, label, fname in best_samples + worst_samples:
         save_replay_image(img_tensor, int(label), fname)
 
-    print(f"Epoch {epoch+1}: Saved replay samples")
+    avg_loss = sum([x[0] for x in epoc_losses]) / len(epoc_losses)
+    loss_values.append(avg_loss)
+    print(f"Epoch {epoch+1}: Avg Loss = {avg_loss:.4f}. Saved replay samples")
 
 # Save model after training
 os.makedirs("models", exist_ok=True)
@@ -101,5 +102,7 @@ if os.path.exists(REPLAY_DIR):
     combined_dataset = torch.utils.data.ConcatDataset([train_dataset, replay_dataset])
     train_loader = DataLoader(combined_dataset, batch_size=32, shuffle=True)
     print(f"Replay buffer loaded: {len(replay_dataset)} samples")
+
+plot_training_loss(loss_values, save_path="plots/training_loss.png")
 
 
