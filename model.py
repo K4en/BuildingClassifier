@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 
 class BuildingClassifier(nn.Module):
-    def __init__(self):
+    def __init__(self, num_classes):
         super(BuildingClassifier, self).__init__()
 
         # Feature extractor
@@ -25,8 +25,8 @@ class BuildingClassifier(nn.Module):
             nn.Linear(in_features=64 * 16 * 16, out_features=128),
             nn.ReLU(),
             nn.Dropout(0.3), # prevent over fitting
-            nn.Linear(128, 1), # Binary output
-            nn.Sigmoid() # Squash output to [0, 1] for binary classification
+            nn.Linear(128, num_classes), # Binary output
+            # nn.Sigmoid() # Squash output to [0, 1] for binary classification
         )
 
     def forward(self, x):
