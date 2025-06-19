@@ -1,6 +1,4 @@
-# README.md
-
-## 🏗️ AI Building Classifier
+# 🏗️ AI Building Classifier
 
 This project is a from-scratch convolutional neural network built using PyTorch to classify architectural images. The model begins with simple binary classification (e.g., **residential** vs **industrial**) and is evolving toward a full **multi-class architecture recognition system**, including both **cultural origins** (e.g., Egyptian, Chinese, Greek) and **stylistic classifications** (e.g., Renaissance, Baroque).
 
@@ -16,6 +14,7 @@ What makes this project different is that it mirrors **how humans learn** — th
 - [x] Memory replay buffer (save most & least accurate samples)
 - [x] Resume training with memory-injected batches
 - [x] Binary classifier (residential vs industrial)
+- [x] Multi-class cultural classifier (Chinese, Egyptian, European, Greek, Indian)
 
 ---
 
@@ -32,11 +31,19 @@ This concept is based on how humans often return to defining moments in our lear
 ### ✅ Phase 1 — Binary Classification
 - Residential vs Industrial buildings using scraped data
 
-### 🔜 Phase 2 — Multi-Class Cultural Classification
-- Categories like: Egyptian, Chinese, Greek, Islamic, Roman, etc.
+### ✅ Phase 2 — Multi-Class Cultural Classification
+- Categories like: Egyptian, Chinese, Greek, Indian, European
+- Replay buffer extended to multi-class scenario
+- Achieved ~79% accuracy on validation
 
-### 🔮 Phase 3 — Fine-Grained Architectural Styles
-- Renaissance, Baroque, Gothic, Neoclassical, Brutalist, and more
+### 🔜 Phase 3 — Fine-Grained Architectural Style Classification
+- Classify architectural **styles** within cultural categories
+- Examples: Renaissance, Baroque, Gothic, Brutalist, Neoclassical
+
+### 🔮 Phase 4 — Self-Improving Memory Loop
+- Use replay memory to auto-refine misclassifications
+- Incorporate knowledge-based reasoning and image similarity
+- Move closer to human-like adaptive learning
 
 ---
 
@@ -45,23 +52,39 @@ This concept is based on how humans often return to defining moments in our lear
 ```
 AI_Building_Classifier/
 ├── Data/               
-    ├── Raw/                   # Raw scraped images
-    ├── Training/              # Structured train/val folders
-    ├── Val/                   # Structured train/val folders
+│   ├── Raw/                   # Raw scraped images
+│   ├── Training/              # Structured train/val folders
+│   ├── Val/                   # Structured train/val folders
 ├── models/                    # Saved model checkpoints
 ├── replay_buffer/             # Stored key images from past runs
 ├── model.py                   # CNN architecture
 ├── train.py                   # Basic training loop
 ├── replay_train.py            # Training with replay buffer
+├── replay_multiclass_train.py # Multi-class training with memory
 ├── evaluate.py                # Model evaluation script
-├── download_images.py         # Multi-query DuckDuckGo scraper
-├── dataset_splitter.py        # Script to split raw images into train/val
+├── download_image_cultures.py # Image scraper for cultural classes
+├── dataset_splitter.py        # Train/val image sorter
 └── JOURNAL.md                 # Thought log and original ideas
 ```
 
 ---
-📉 Training Loss Over Time
-![training_loss](https://github.com/user-attachments/assets/28a52d68-dd0b-4119-8974-e7915d6c1dc8)
+
+## 📉 Training Loss Over Time
+![multi_training_loss](https://github.com/user-attachments/assets/04152e25-d360-4d03-bbda-b7eb0dd29d8a)
+
+---
+
+## 📊 Multi-Class Validation Results (Phase 2)
+
+| Class     | Precision | Recall | F1-score |
+|-----------|-----------|--------|----------|
+| Chinese   | 0.94      | 0.78   | 0.85     |
+| Egyptian  | 0.74      | 0.86   | 0.80     |
+| European  | 0.70      | 0.77   | 0.73     |
+| Greek     | 0.91      | 0.83   | 0.87     |
+| Indian    | 0.70      | 0.69   | 0.70     |
+| **Avg**   | **0.80**  | **0.79** | **0.79** |
+
 ---
 
 ## 🧾 License & Attribution
