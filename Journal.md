@@ -111,7 +111,7 @@ Epoch [10/10] Loss: 0.3783
 | Greek     | 0.91      | 0.83   | 0.87     |
 | Indian    | 0.70      | 0.69   | 0.70     |
 
-![Confusion Matrix](plots/confusion_matrix.png)
+![confusion_matrix](https://github.com/user-attachments/assets/95d997c2-1b7f-4891-8281-726e87379ea7)
 
 ### 🔍 Observations
 - Model performs strongest on **Greek** and **Chinese** classes
