@@ -78,6 +78,52 @@ Epoch [10/10] Loss: 0.3783
 - [ ] Transition to cultural and stylistic classification (e.g. Gothic, Baroque)
 
 ---
+## 🏗️ Phase 2: Multiclass Cultural Classification
+
+### ✅ Training Overview
+- **Model:** Custom CNN (`BuildingClassifier` with replay buffer)
+- **Classes:** Chinese, Egyptian, European, Greek, Indian
+- **Dataset:** ~880 images across 5 classes (post-split validation set)
+- **Epochs:** 5
+- **Replay Buffer:** Enabled – 10 best + 10 worst samples per epoch
+
+### 📉 Training Loss (5 Epochs)
+- Epoch 1: Loss = 1.4967
+- Epoch 2: Loss = 1.2377
+- Epoch 3: Loss = 1.0624
+- Epoch 4: Loss = 0.9311
+- Epoch 5: Loss = 0.7879
+
+![multi_training_loss](https://github.com/user-attachments/assets/e2eee526-d783-4b2f-b07f-8a65ceb32721)
+
+
+---
+
+### 🧪 Evaluation Results
+- **Overall Accuracy:** 78.64%
+
+#### 📊 Per-Class Performance
+| Class     | Precision | Recall | F1-score |
+|-----------|-----------|--------|----------|
+| Chinese   | 0.94      | 0.78   | 0.85     |
+| Egyptian  | 0.74      | 0.86   | 0.80     |
+| European  | 0.70      | 0.77   | 0.73     |
+| Greek     | 0.91      | 0.83   | 0.87     |
+| Indian    | 0.70      | 0.69   | 0.70     |
+
+![confusion_matrix](https://github.com/user-attachments/assets/95d997c2-1b7f-4891-8281-726e87379ea7)
+
+### 🔍 Observations
+- Model performs strongest on **Greek** and **Chinese** classes
+- **Indian** class had lowest F1 — may benefit from more data or contrastive samples
+- Replay buffer likely helped maintain stable improvements each epoch
+
+---
+
+### 🔄 Next Steps
+- Increase epoch count to 10–15
+- Explore data augmentation (lighting, perspective)
+- Begin Phase 3: Style classification (Baroque, Gothic, etc.)
 
 ## Appendix: The Original Thought That Sparked the Replay Buffer
 
