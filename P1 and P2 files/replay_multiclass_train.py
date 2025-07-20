@@ -10,7 +10,7 @@ from utils import plot_training_loss
 
 # Config #
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-REPLAY_DIR = "replay_buffer"
+REPLAY_DIR = "../replay_buffer"
 
 # Transform #
 transform = transforms.Compose([
@@ -27,8 +27,8 @@ val_loader = DataLoader(val_dataset, batch_size=32, shuffle=True)
 # Model setup #
 num_classes = len(train_dataset.classes)
 model = BuildingClassifier(num_classes=num_classes).to(device)
-if os.path.exists("models/buildingmulticlassifier.pth"):
-    model.load_state_dict(torch.load("models/buildingmulticlassifier.pth"))
+if os.path.exists("../models/buildingmulticlassifier.pth"):
+    model.load_state_dict(torch.load("../models/buildingmulticlassifier.pth"))
 model.train()
 criterion = nn.CrossEntropyLoss(reduction="none")
 optimizer = optim.Adam(model.parameters(), lr=0.001)
@@ -69,8 +69,8 @@ for epoch in range(5):
     print(f"Epoch {epoch+1}: Avg Loss = {avg_loss:.4f}. Saved replay samples")
 
 # Save model #
-os.makedirs("replay_buffer", exist_ok=True)
-torch.save(model.state_dict(), "models/buildingmulticlassifier.pth")
+os.makedirs("../replay_buffer", exist_ok=True)
+torch.save(model.state_dict(), "../models/buildingmulticlassifier.pth")
 print("Training complete, Model save! Banzai it worked!")
 
 # Replay loader
@@ -98,4 +98,4 @@ if os.path.exists(REPLAY_DIR):
     train_loader = DataLoader(combined_dataset, batch_size=32, shuffle=True)
     print(f"Replay buffer loaded: {len(replay_dataset)} samples")
 
-plot_training_loss(loss_values, save_path="plots/multi_training_loss.png")
+plot_training_loss(loss_values, save_path="../plots/multi_training_loss.png")

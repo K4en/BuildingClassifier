@@ -19,7 +19,7 @@ queries = {
 }
 
 TARGET_PER_CLASS = 500
-SAVE_DIR = "Data/Raw"
+SAVE_DIR = "../Data/Raw"
 MAX_PER_QUERY = 150 # stop early if enough valid image
 
 # Helpers #

@@ -5,8 +5,8 @@ from model import BuildingClassifier
 import os
 
 # Config #
-MODEL_PATH = "models/buildingclassifier.pth"
-DATA_DIR = "Data/Val"
+MODEL_PATH = "../models/buildingclassifier.pth"
+DATA_DIR = "../Data/Val"
 BATCH_SIZE = 32
 
 # Transformations #

@@ -55,6 +55,6 @@ for epoch in range(num_epochs):
     print(f"Epoch [{epoch+1}/{num_epochs}] Loss: {avg_loss:.4f}")
 
 # 7. Save model
-os.makedirs("models", exist_ok=True)
-torch.save(model.state_dict(), "models/buildingclassifier.pth")
+os.makedirs("../models", exist_ok=True)
+torch.save(model.state_dict(), "../models/buildingclassifier.pth")
 print("Model saved to models/buildingclassifier.pth")

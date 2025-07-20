@@ -10,7 +10,7 @@ from utils import plot_training_loss
 
 # Config
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-REPLAY_DIR = "replay_buffer"
+REPLAY_DIR = "../replay_buffer"
 
 # Transform
 transform = transforms.Compose([
@@ -28,8 +28,8 @@ val_loader = DataLoader(val_dataset, batch_size=32, shuffle=True)
 
 # Model setup
 model = BuildingClassifier().to(device)
-if os.path.exists("models/buildingclassifier.pth"):
-    model.load_state_dict(torch.load("models/buildingclassifier.pth"))
+if os.path.exists("../models/buildingclassifier.pth"):
+    model.load_state_dict(torch.load("../models/buildingclassifier.pth"))
 model.train()
 
 criterion = nn.BCELoss(reduction="none") # to track individual sample losses
@@ -74,8 +74,8 @@ for epoch in range(5):
     print(f"Epoch {epoch+1}: Avg Loss = {avg_loss:.4f}. Saved replay samples")
 
 # Save model after training
-os.makedirs("models", exist_ok=True)
-torch.save(model.state_dict(), "models/buildingclassifier.pth")
+os.makedirs("../models", exist_ok=True)
+torch.save(model.state_dict(), "../models/buildingclassifier.pth")
 print("Training complete, Model saved")
 
 # Inject replay in next training ground
@@ -103,6 +103,6 @@ if os.path.exists(REPLAY_DIR):
     train_loader = DataLoader(combined_dataset, batch_size=32, shuffle=True)
     print(f"Replay buffer loaded: {len(replay_dataset)} samples")
 
-plot_training_loss(loss_values, save_path="plots/training_loss.png")
+plot_training_loss(loss_values, save_path="../plots/training_loss.png")
 
 

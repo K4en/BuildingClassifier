@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ae356e98-320c-4d2d-824a-b174284a6b4c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/AI_Building_Classifier.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/evaluate.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
+    <list default="true" id="ae356e98-320c-4d2d-824a-b174284a6b4c" name="Changes" comment="Phase 3 files, dataset, splitter, image_downloader, model, training script">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,11 +20,36 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;K4en&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/K4en/BuildingClassifier&quot;,
+    &quot;accountId&quot;: &quot;27822089-c776-4b48-a06c-f34711786d99&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2y39AUoZBuExAGjmgRam71c1S01" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -41,21 +58,30 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.data_splitter_p3.executor": "Run",
+    "Python.dataset_splitter.executor": "Run",
+    "Python.download_image_cultures.executor": "Run",
+    "Python.download_image_cultures_styles.executor": "Run",
+    "Python.evaluate.executor": "Run",
+    "Python.image_downloader.executor": "Run",
+    "Python.image_downloader_multiquery.executor": "Run",
+    "Python.replay_multiclass_train.executor": "Run",
+    "Python.replay_train.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-PY-251.25410.159" />
         <option value="bundled-python-sdk-e0ed3721d81e-36ea0e71a18c-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.25410.159" />
       </set>
     </attachedChunks>
@@ -67,11 +93,114 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1749052246508</updated>
-      <workItem from="1749052247524" duration="6022000" />
+      <workItem from="1749052247524" duration="33576000" />
+      <workItem from="1749458059296" duration="306000" />
+      <workItem from="1749892639476" duration="35000" />
     </task>
+    <task id="LOCAL-00001" summary="Starting binary model and training script">
+      <option name="closed" value="true" />
+      <created>1749213473209</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1749213473209</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Starting binary model and training script">
+      <option name="closed" value="true" />
+      <created>1749213500539</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1749213500539</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Starting binary model and training scr">
+      <option name="closed" value="true" />
+      <created>1749213586820</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1749213586820</updated>
+    </task>
+    <task id="LOCAL-00004" summary="New training script, image_downloader, dataset_splitter">
+      <option name="closed" value="true" />
+      <created>1749400815107</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1749400815107</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Multiquery_image_downloader. fixed replay_train">
+      <option name="closed" value="true" />
+      <created>1749457205678</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1749457205678</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Multiquery_image_downloader. fixed replay_train">
+      <option name="closed" value="true" />
+      <created>1749459201655</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1749459201655</updated>
+    </task>
+    <task id="LOCAL-00007" summary="evaluate script&#10;utils script&#10;replay_train update for plotting">
+      <option name="closed" value="true" />
+      <created>1749467607803</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1749467607803</updated>
+    </task>
+    <task id="LOCAL-00008" summary="download_image_cultures script">
+      <option name="closed" value="true" />
+      <created>1750329735532</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1750329735532</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Phase 3 files, dataset, splitter, image_downloader, model, training script">
+      <option name="closed" value="true" />
+      <created>1753041392862</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1753041392862</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Starting binary model and training script" />
+    <MESSAGE value="Starting binary model and training scr" />
+    <MESSAGE value="New training script, image_downloader, dataset_splitter" />
+    <MESSAGE value="Multiquery_image_downloader. fixed replay_train" />
+    <MESSAGE value="evaluate script&#10;utils script&#10;replay_train update for plotting" />
+    <MESSAGE value="download_image_cultures script" />
+    <MESSAGE value="Phase 3 files, dataset, splitter, image_downloader, model, training script" />
+    <option name="LAST_COMMIT_MESSAGE" value="Phase 3 files, dataset, splitter, image_downloader, model, training script" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/AI_Building_Classifier$image_downloader.coverage" NAME="image_downloader Coverage Results" MODIFIED="1749383150904" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AI_Building_Classifier$image_downloader_multiquery.coverage" NAME="image_downloader_multiquery Coverage Results" MODIFIED="1749409842848" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AI_Building_Classifier$evaluate.coverage" NAME="evaluate Coverage Results" MODIFIED="1749464782408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AI_Building_Classifier$dataset_splitter.coverage" NAME="dataset_splitter Coverage Results" MODIFIED="1749410922827" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AI_Building_Classifier$replay_train.coverage" NAME="replay_train Coverage Results" MODIFIED="1749467077251" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
