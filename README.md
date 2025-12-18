@@ -87,6 +87,38 @@ AI_Building_Classifier/
 
 ---
 
+## ♻️ Phase 4 — Replay-Based Self-Improvement
+
+The model now incorporates a **replay refinement loop**, where it:
+- Logs predictions on the validation set during training.
+- Extracts high-confidence correct (`focus`) and high-confidence incorrect (`reinforce`) samples.
+- Re-injects these samples during future training to focus on meaningful mistakes and strengths.
+
+This mimics how humans review both best and worst examples to deepen understanding.
+
+### 🧠 Replay Training Curve
+
+| Epoch | Train Acc | Val Acc | Replay Loss |
+|-------|-----------|---------|-------------|
+| 1     | 39.02%    | 43.40%  | 1.43        |
+| 2     | 50.73%    | 53.77%  | 1.15        |
+| 3     | 56.10%    | 64.15%  | 1.30        |
+| 4     | 58.78%    | 66.98%  | 1.34        |
+| 5     | 58.05%    | 66.04%  | 0.95        |
+| 6     | 62.68%    | 55.66%  | 1.24        |
+| 7     | 58.54%    | 63.21%  | 1.39        |
+| 8     | 62.20%    | 60.38%  | 1.01        |
+| 9     | 66.59%    | 63.21%  | 1.38        |
+| 10    | 66.34%    | 71.70%  | 1.21        |
+
+### 📈 Replay + Focus Training Plot
+
+![Replay Focus Training Loss](plots/replay_focus_training.png)
+
+> 📝 Logs and plots are stored under `/checkpoints/` and `/plots/`. Replay samples in `/replay/`. See `Journal.md` for full self-training idea flow.
+
+---
+
 ## 🧾 License & Attribution
 
 All ideas, structure, and conceptual learning logic designed by [Tamas Kiss](https://github.com/K4en).

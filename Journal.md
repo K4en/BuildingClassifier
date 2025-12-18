@@ -166,3 +166,44 @@ Drill down into styles like:
 This mirrors how architectural history is taught: understand the **culture**, then the **evolution of its expression**.
 
 And that’s the direction I’m building toward — a model that doesn’t just see *what a building is*, but understands *where it comes from* and *why it looks the way it does*.
+
+🔁 Phase 4: Self-Improving Replay Mechanism
+✅ Goals
+
+Introduce continual learning by using high-confidence predictions as self-reinforcement
+
+Extract:
+
+Focus Pool: most confident correct predictions
+
+Reinforce Pool: incorrect predictions at high confidence (when available)
+
+Replay these samples in future training to strengthen or correct learned patterns
+
+🧠 Key Mechanism
+
+During validation, the model logs confidence + correctness for every sample
+
+After each run, a separate script:
+
+Saves the top-N confident correct predictions as focus.json
+
+Saves high-confidence wrong predictions as reinforce.json
+
+Future training re-injects these via lightweight loaders to guide the model
+
+🏋️‍♂️ Replay Training Details
+
+Focus Pool Size: 83 samples
+
+Reinforce Pool: Not used (0 samples available in current run)
+
+Fine-tuning Epochs: 3 (on focus samples)
+
+📈 Replay Fine-Tune Results
+
+Training accuracy continued improving on the refined subset
+
+Model successfully re-aligned internal representations by re-seeing what it knew
+
+Demonstrates potential for self-guided improvement without human labels

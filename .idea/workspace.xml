@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ae356e98-320c-4d2d-824a-b174284a6b4c" name="Changes" comment="Phase 3 files, dataset, splitter, image_downloader, model, training script">
+      <change afterPath="$PROJECT_DIR$/extract_replay_pools.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/replay_dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/AI_Building_Classifier.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AI_Building_Classifier.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Journal.md" beforeDir="false" afterPath="$PROJECT_DIR$/Journal.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset_p3.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_p3.py" beforeDir="false" afterPath="$PROJECT_DIR$/model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_p3.py" beforeDir="false" afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +53,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/K4en/BuildingClassifier&quot;,
-    &quot;accountId&quot;: &quot;27822089-c776-4b48-a06c-f34711786d99&quot;
+    &quot;accountId&quot;: &quot;f1420684-2c19-416d-8ea1-d0dbb659d4a9&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -63,11 +72,17 @@
     "Python.download_image_cultures.executor": "Run",
     "Python.download_image_cultures_styles.executor": "Run",
     "Python.evaluate.executor": "Run",
+    "Python.extract_replay_pools.executor": "Run",
     "Python.image_downloader.executor": "Run",
     "Python.image_downloader_multiquery.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.replay_dataset.executor": "Run",
     "Python.replay_multiclass_train.executor": "Run",
     "Python.replay_train.executor": "Run",
+    "Python.train.executor": "Run",
+    "Python.train_p3.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
@@ -75,14 +90,19 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Tamas\Documents\Python\AI_Building_Classifier\P1 and P2 files" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-e0ed3721d81e-36ea0e71a18c-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.25410.159" />
+        <option value="bundled-python-sdk-164cda30dcd9-0af03a5fa574-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.26830.99" />
       </set>
     </attachedChunks>
   </component>
@@ -169,7 +189,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753041392862</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Phase 3 files, dataset, splitter, image_downloader, model, training script">
+      <option name="closed" value="true" />
+      <created>1753041630574</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1753041630574</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
