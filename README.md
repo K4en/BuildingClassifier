@@ -121,8 +121,18 @@ This mimics how humans review both best and worst examples to deepen understandi
 
 ## 🧾 License & Attribution
 
-All ideas, structure, and conceptual learning logic designed by [Tamas Kiss](https://github.com/K4en).
+## License
 
-Some code co-developed with the help of ChatGPT-4.
+This project is currently released under a **source-available, non-commercial license**.
 
-Use for learning and experimentation — contributions and forks welcome!
+You are free to:
+- View, learn from, and experiment with the code for **personal or educational use**.
+
+You may **not**:
+- Use this project or its derivatives for **commercial purposes** (including SaaS, resale, client work, or monetized tools).
+
+A future license may allow commercial usage under specific conditions.
+
+See [LICENSE.md](./LICENSE.md) for full details.
+
+Some code co-developed with the help of ChatGPT-5.1.

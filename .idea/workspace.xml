@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ae356e98-320c-4d2d-824a-b174284a6b4c" name="Changes" comment="Phase 3 files, dataset, splitter, image_downloader, model, training script">
-      <change afterPath="$PROJECT_DIR$/extract_replay_pools.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/replay_dataset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/AI_Building_Classifier.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AI_Building_Classifier.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Journal.md" beforeDir="false" afterPath="$PROJECT_DIR$/Journal.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset_p3.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model_p3.py" beforeDir="false" afterPath="$PROJECT_DIR$/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_p3.py" beforeDir="false" afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
+    <list default="true" id="ae356e98-320c-4d2d-824a-b174284a6b4c" name="Changes" comment="Phase 4 complete with documentation">
+      <change afterPath="$PROJECT_DIR$/LICENSE.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,7 +188,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753041630574</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Phase 4 complete with documentation">
+      <option name="closed" value="true" />
+      <created>1766048273029</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1766048273029</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,7 +221,8 @@
     <MESSAGE value="evaluate script&#10;utils script&#10;replay_train update for plotting" />
     <MESSAGE value="download_image_cultures script" />
     <MESSAGE value="Phase 3 files, dataset, splitter, image_downloader, model, training script" />
-    <option name="LAST_COMMIT_MESSAGE" value="Phase 3 files, dataset, splitter, image_downloader, model, training script" />
+    <MESSAGE value="Phase 4 complete with documentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Phase 4 complete with documentation" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/AI_Building_Classifier$image_downloader.coverage" NAME="image_downloader Coverage Results" MODIFIED="1749383150904" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
